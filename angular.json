@@ -34,10 +34,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/feature-search/src/**/*.ts",
-              "libs/feature-search/src/**/*.html"
-            ]
+            "lintFilePatterns": ["libs/feature-search/src/**/*.ts", "libs/feature-search/src/**/*.html"]
           }
         }
       },
@@ -76,10 +73,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/feature-upgrade/src/**/*.ts",
-              "libs/feature-upgrade/src/**/*.html"
-            ]
+            "lintFilePatterns": ["libs/feature-upgrade/src/**/*.ts", "libs/feature-upgrade/src/**/*.html"]
           }
         }
       },
@@ -101,10 +95,7 @@
             "polyfills": "apps/flight-app/src/polyfills.ts",
             "tsConfig": "apps/flight-app/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "apps/flight-app/src/favicon.ico",
-              "apps/flight-app/src/assets"
-            ],
+            "assets": ["apps/flight-app/src/favicon.ico", "apps/flight-app/src/assets"],
             "styles": ["apps/flight-app/src/styles.scss"],
             "scripts": []
           },
@@ -162,10 +153,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/flight-app/src/**/*.ts",
-              "apps/flight-app/src/**/*.html"
-            ]
+            "lintFilePatterns": ["apps/flight-app/src/**/*.ts", "apps/flight-app/src/**/*.html"]
           }
         },
         "test": {
@@ -240,10 +228,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/flight-data/src/**/*.ts",
-              "libs/flight-data/src/**/*.html"
-            ]
+            "lintFilePatterns": ["libs/flight-data/src/**/*.ts", "libs/flight-data/src/**/*.html"]
           }
         }
       },
