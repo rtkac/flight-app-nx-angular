@@ -1,6 +1,90 @@
 {
   "version": 1,
   "projects": {
+    "feature-search": {
+      "projectType": "library",
+      "root": "libs/feature-search",
+      "sourceRoot": "libs/feature-search/src",
+      "prefix": "my-project",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "outputs": ["dist/libs/feature-search"],
+          "options": {
+            "project": "libs/feature-search/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/feature-search/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/feature-search/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/feature-search"],
+          "options": {
+            "jestConfig": "libs/feature-search/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/feature-search/src/**/*.ts",
+              "libs/feature-search/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "feature-upgrade": {
+      "projectType": "library",
+      "root": "libs/feature-upgrade",
+      "sourceRoot": "libs/feature-upgrade/src",
+      "prefix": "my-project",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "outputs": ["dist/libs/feature-upgrade"],
+          "options": {
+            "project": "libs/feature-upgrade/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/feature-upgrade/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/feature-upgrade/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/feature-upgrade"],
+          "options": {
+            "jestConfig": "libs/feature-upgrade/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/feature-upgrade/src/**/*.ts",
+              "libs/feature-upgrade/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "flight-app": {
       "projectType": "application",
       "root": "apps/flight-app",
@@ -122,6 +206,48 @@
       },
       "tags": [],
       "implicitDependencies": ["flight-app"]
+    },
+    "flight-data": {
+      "projectType": "library",
+      "root": "libs/flight-data",
+      "sourceRoot": "libs/flight-data/src",
+      "prefix": "my-project",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "outputs": ["dist/libs/flight-data"],
+          "options": {
+            "project": "libs/flight-data/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/flight-data/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/flight-data/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/flight-data"],
+          "options": {
+            "jestConfig": "libs/flight-data/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/flight-data/src/**/*.ts",
+              "libs/flight-data/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
     }
   }
 }

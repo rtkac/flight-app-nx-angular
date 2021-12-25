@@ -1,12 +1,19 @@
+// apps/flight-app/src/app/app.module.ts
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
-import { NxWelcomeComponent } from './nx-welcome.component';
+
+// You might need to add this line by hand:
+import { FeatureSearchModule } from '@my-project/feature-search';
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent],
-  imports: [BrowserModule],
+  imports: [
+    BrowserModule,
+    // Import FeatureSearchModule
+    FeatureSearchModule,
+  ],
+  declarations: [AppComponent],
   providers: [],
   bootstrap: [AppComponent],
 })
