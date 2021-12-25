@@ -8,8 +8,10 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "prettier:check": "nx format:check",
-    "prettier:fix": "nx format"
+    "prettier:apps": "prettier --write --config ./.prettierrc --ignore-path ./.prettierignore \"./apps/**/*.{js,ts,json,css,scss,html,md}\"",
+    "prettier:libs": "prettier --write --config ./.prettierrc --ignore-path ./.prettierignore \"./libs/**/*.{js,ts,json,css,scss,html,md}\"",
+    "prettier": "npm run prettier:apps && npm run prettier:libs",
+    "lint": "nx workspace-lint && nx run-many --target=lint --all --parallel"
   },
   "private": true,
   "dependencies": {
